@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="Home" />
+    </group>
+
+    <group>
+        <item android:title="Options">
+            <menu>
+                <item
+                    android:id="@+id/nav_notif"
+                    android:icon="@drawable/notif_icon"
+                    android:title="Notifications" />
+                <item
+                    android:id="@+id/nav_calendar"
+                    android:icon="@drawable/calendar_icon"
+                    android:title="Calendar" />
+                <item
+                    android:id="@+id/nav_reddit"
+                    android:icon="@drawable/reddit_icon"
+                    android:title="Reddit" />
+                <item
+                    android:id="@+id/nav_tools"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Tools" />
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Utilities">
+        <menu>
+            <item
+                android:id="@+id/nav_console"
+                android:icon="@drawable/console_icon"
+                android:title="Console" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Range Sensor" />
+            <item
+                android:id="@+id/nav_misc"
+                android:icon="@drawable/misc_icon"
+                android:title="Miscellaneous" />
+        </menu>
+    </item>
+
+</menu>

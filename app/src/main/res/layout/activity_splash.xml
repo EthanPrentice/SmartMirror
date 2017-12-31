@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.prentice.ethan.smartmirror1.SplashActivity">
+
+    <ImageView
+        android:id="@+id/splashLogo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="54dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logo"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/githubLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:text="@string/githubLink"
+        android:textColor="@color/colorSplashAccent" />
+
+    <RelativeLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/splashLogo"
+        android:layout_marginTop="33dp">
+
+        <ImageView
+            android:id="@+id/usernameIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/usernameField"
+            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="9dp"
+            android:layout_toStartOf="@+id/usernameField"
+            app:srcCompat="@drawable/user" />
+
+        <ImageView
+            android:id="@+id/passwordIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/passwordField"
+            android:layout_alignStart="@+id/usernameIcon"
+            android:layout_marginBottom="8dp"
+            app:srcCompat="@android:drawable/ic_lock_lock" />
+
+        <EditText
+            android:id="@+id/usernameField"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="@string/rememberedUsername"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@color/colorSplashAccent"
+            android:textColorHint="@color/colorSplashAccent" />
+
+        <EditText
+            android:id="@+id/passwordField"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/usernameField"
+            android:layout_below="@+id/usernameField"
+            android:layout_marginTop="34dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:textColor="@color/colorSplashAccent"
+            android:textColorHint="@color/colorSplashAccent" />
+
+        <ImageButton
+            android:id="@+id/loginBtn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:minWidth="0pt"
+            android:padding="0pt"
+            android:layout_below="@+id/passwordField"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:cropToPadding="true"
+            android:elevation="15dp"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/login_btn" />
+
+        <CheckBox
+            android:id="@+id/rememberUserCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:buttonTint="@color/colorSplashAccent"
+            android:checked="@string/checkRememberUsername"
+            android:text="Remember Me?"
+            android:textColor="@color/colorSplashAccent" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
